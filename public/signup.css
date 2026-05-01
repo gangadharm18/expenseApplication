@@ -1,0 +1,14 @@
+input{
+    max-width: 500px;
+    
+}
+a{
+    text-decoration: none;
+}
+.content-box {
+    
+  background-color:aquamarine;
+  display: inline-block; 
+  padding: 2rem;       
+  border-radius: 8px;   
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/signup.css">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row row-pink">
+            
+            <div class="col d-flex flex-column align-items-center">
+                <div class="content-box">
+                    <h3 class="mb-3">Sign-Up Form</h3>
+                    <form action="" onsubmit="handleFormSignup(event)" class="d-flex flex-column align-items-center mb-3">
+                        <label for="" class="form-label border-primary">UserName:</label>
+                        <input type="text" class="form-control" name="userName" required>
+                        <label for="" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" name="email" required>
+                        <label for="" class="form-label">Password:</label>
+                        <input type="text" class="form-control" name="password" required>
+                        <button class="btn mt-3 bg-success" type="submit">Sign-Up</button>
+                    </form>
+
+
+                    <label>Already have account <a href="/login.html" class="">Sign-in</a> Here</label>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="/bootstrap.js"></script>
+    <script src="/signup.js"></script>
+
+</body>
+
+</html>
