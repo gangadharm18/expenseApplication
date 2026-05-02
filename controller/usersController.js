@@ -39,15 +39,15 @@ const checkUser = async (req, res) => {
         if (user) {
           
            if(user.password===password){
-              res.status(200).json({ message: "Login successful" })
+              res.status(200).json({ message: " User login sucessful" })
            }else{
-             res.json({ message: "Invalid Password" })
+             res.status(401).json({ message: "(User not authorized" })
              return
            }
           
            
         } else {
-            res.json({ message: "invalid Email" })
+            res.status(404).json({ message: "User not Found" })
         }
     } catch (error) {
         res.status(500).json(error.message)
