@@ -11,7 +11,7 @@ const db=require('./utils/dbconnect')
 const userRoute=require('./routes/usersRoute')
 
 
-db.sync({force:false}).then(()=>{
+db.sync({force:true}).then(()=>{
     app.listen(3000,()=>{
         console.log("server started")
     })
