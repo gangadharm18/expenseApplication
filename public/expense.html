@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/script.css">
+</head>
+
+<body>
+   <div>
+     <form action="" class="d-flex flex-column align-items-center text-center p-md-5 p-2"
+                            onsubmit="handleFormSubmit(event)">
+                            <label for="select" class="form-label">SelectType:</label>
+                            <select name="type" id="" class="form-control w-100">
+                                <option value="credit">Income(Credit)</option>
+                                <option value="debit">Expense(Debit)</option>
+                            </select>
+
+                            <label for="amount" class="form-label">Amount:</label>
+                            <input type="number" placeholder="enter the Amount" name="amount" class="form-control"
+                                required>
+                            <label for="category" class="form-label">Expence Category:</label>
+                            <select name="category" id="expence-category" class="form-control">
+                                <option value="Food">Food</option>
+                                <option value="Fuel">Fuel</option>
+                                <option value="Transpotation">Transpotation</option>
+                                <option value="Accommodation">Accommodation</option>
+                                <option value="Health">Health</option>
+
+                            </select>
+
+                            <label for="description" class="form-label">Description:</label>
+                            <input type="text" placeholder="enter description" name="description" class="form-control"
+                                required><br>
+                            <button type="submit" class="ms-2" id="submitbtn">Add</button>
+                        </form>
+
+   </div>
+   <table class="table">
+    <thead>
+        <tr>
+            <th>type</th>
+            <th>amount</th>
+            <th>category</th>
+            <th>description</th>
+            <th></th>
+        </tr>
+       <tbody id="table">
+       
+       </tbody>
+       
+
+    </thead>
+   </table>
+
+    
+
+
+    <script src="/bootstrap.js"></script>
+
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+
+</html>

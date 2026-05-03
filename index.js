@@ -9,6 +9,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname,'public')))
 const db=require('./utils/dbconnect')
 const userRoute=require('./routes/usersRoute')
+const expenseRoute=require('./routes/expenseRoute')
 
 
 db.sync({force:true}).then(()=>{
@@ -23,7 +24,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'public','signup.html'))
 });
 
-app.use('/expense',userRoute)
+app.use('/user',userRoute)
+app.use('/expense',expenseRoute)
 
 //for invalid url
 app.use((req,res)=>{

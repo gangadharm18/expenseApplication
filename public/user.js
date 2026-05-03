@@ -1,5 +1,5 @@
 
-const api = '/expense';
+const api = '/user';
 
 function handleFormSignup(event) {
     event.preventDefault();
@@ -38,9 +38,11 @@ function handleFormSignin(event) {
     axios.post(`${api}/login`,userDetails).then((res) => {
         const user=res.data
 
-        if(user.message){
+        if(user){
+           
             alert(res.data.message)
-            return
+            window.location.href="/expense.html"
+            
         }
        
     }
